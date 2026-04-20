@@ -4,11 +4,6 @@ Aplicativo mobile desenvolvido em **React Native com Expo** para a disciplina de
 
 ---
 
-## 📌 Nota de Desenvolvimento
-Para esta entrega, optou-se por utilizar diretamente os componentes nativos do React Native (como `TouchableOpacity` e `TextInput`). Componentes customizados pré-criados (como `VLButton`, `VLTextInput`) e diretórios de `resources` **não foram utilizados** no projeto final.
-
----
-
 ## 🚀 Como rodar o projeto
 
 1. **Clone o repositório:**
