@@ -30,7 +30,6 @@ export default function LoginScreen({ navigation }) {
     setErrorMsg('');
 
     try {
-      // Passo 1: busca usuários existentes na API para validar
       const users = await getUsers();
       const userExists = users.find(
         (u) =>
@@ -43,10 +42,8 @@ export default function LoginScreen({ navigation }) {
         return;
       }
 
-      // Passo 2: tenta autenticar com o endpoint de login
       await login(username.trim(), password.trim());
 
-      // Sucesso: navega para Home
       navigation.replace('Home');
     } catch (error) {
       setErrorMsg(error.message || 'Erro ao realizar login. Tente novamente.');
@@ -78,7 +75,6 @@ export default function LoginScreen({ navigation }) {
         contentContainerStyle={styles.scrollContent}
         keyboardShouldPersistTaps="handled"
       >
-        {/* Logo / Header */}
         <View style={styles.headerContainer}>
           <View style={styles.logoBox}>
             <Text style={styles.logoIcon}>🛍️</Text>
@@ -87,9 +83,7 @@ export default function LoginScreen({ navigation }) {
           <Text style={styles.subtitle}>Faça login para continuar</Text>
         </View>
 
-        {/* Card de Login */}
         <View style={styles.card}>
-          {/* Campo Username */}
           <Text style={styles.label}>Username</Text>
           <View style={styles.inputWrapper}>
             <TextInput
@@ -106,7 +100,6 @@ export default function LoginScreen({ navigation }) {
             />
           </View>
 
-          {/* Campo Password */}
           <Text style={styles.label}>Senha</Text>
           <View style={styles.inputWrapper}>
             <TextInput
@@ -123,14 +116,12 @@ export default function LoginScreen({ navigation }) {
             />
           </View>
 
-          {/* Mensagem de erro */}
           {errorMsg !== '' && (
             <View style={styles.errorBox}>
               <Text style={styles.errorText}>⚠️ {errorMsg}</Text>
             </View>
           )}
 
-          {/* Botão de login */}
           <TouchableOpacity
             style={[styles.loginButton, loading && styles.loginButtonDisabled]}
             onPress={handleLogin}
@@ -144,7 +135,6 @@ export default function LoginScreen({ navigation }) {
             )}
           </TouchableOpacity>
 
-          {/* Botão auxiliar – ver usuários */}
           <TouchableOpacity
             style={styles.helpButton}
             onPress={handleShowUsers}

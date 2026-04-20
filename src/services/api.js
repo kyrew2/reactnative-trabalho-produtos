@@ -10,7 +10,6 @@ const api = axios.create({
   },
 });
 
-// Busca todos os usuários cadastrados na API
 export const getUsers = async () => {
   try {
     const response = await api.get('/users');
@@ -20,7 +19,6 @@ export const getUsers = async () => {
   }
 };
 
-// Realiza o login na Fake Store API
 export const login = async (username, password) => {
   try {
     const response = await api.post('/auth/login', { username, password });
@@ -33,7 +31,6 @@ export const login = async (username, password) => {
   }
 };
 
-// Busca todos os produtos
 export const getProducts = async () => {
   try {
     const response = await api.get('/products');
@@ -43,7 +40,6 @@ export const getProducts = async () => {
   }
 };
 
-// Busca produtos por categoria
 export const getProductsByCategory = async (category) => {
   try {
     const response = await api.get(`/products/category/${encodeURIComponent(category)}`);
@@ -53,7 +49,6 @@ export const getProductsByCategory = async (category) => {
   }
 };
 
-// Busca detalhes de um produto específico
 export const getProductById = async (id) => {
   try {
     const response = await api.get(`/products/${id}`);

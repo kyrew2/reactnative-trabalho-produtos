@@ -22,7 +22,6 @@ export default function HomeScreen({ navigation }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [errorMsg, setErrorMsg] = useState('');
 
-  // Configura o header customizado
   useEffect(() => {
     navigation.setOptions({
       headerShown: true,
@@ -71,7 +70,6 @@ export default function HomeScreen({ navigation }) {
     }
   };
 
-  // Carrega todos os produtos ao montar a tela
   useEffect(() => {
     const init = async () => {
       setLoading(true);
@@ -81,7 +79,6 @@ export default function HomeScreen({ navigation }) {
     init();
   }, []);
 
-  // Ao selecionar/limpar categoria
   const handleSelectCategory = async (categoryId) => {
     const newCategory = selectedCategory === categoryId ? null : categoryId;
     setSelectedCategory(newCategory);
@@ -90,7 +87,6 @@ export default function HomeScreen({ navigation }) {
     setLoading(false);
   };
 
-  // Pull to refresh
   const onRefresh = async () => {
     setRefreshing(true);
     await loadProducts(selectedCategory);
@@ -280,7 +276,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingBottom: 24,
   },
-  // Seção de filtro
   filterSection: {
     paddingTop: 16,
     paddingBottom: 8,
@@ -334,7 +329,6 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '700',
   },
-  // Card de produto
   productCard: {
     flexDirection: 'row',
     backgroundColor: COLORS.surface,

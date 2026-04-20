@@ -25,7 +25,6 @@ export default function GroupInfoScreen() {
       contentContainerStyle={styles.content}
       showsVerticalScrollIndicator={false}
     >
-      {/* Header decorativo */}
       <View style={styles.headerCard}>
         <Text style={styles.emoji}>👨‍💻</Text>
         <Text style={styles.appTitle}>FakeStore App</Text>
@@ -41,7 +40,6 @@ export default function GroupInfoScreen() {
         </Text>
       </View>
 
-      {/* Seção de tecnologias */}
       <View style={styles.techSection}>
         <Text style={styles.sectionTitle}>🛠️ Tecnologias Utilizadas</Text>
         <View style={styles.techGrid}>
@@ -55,7 +53,6 @@ export default function GroupInfoScreen() {
         </View>
       </View>
 
-      {/* Seção de membros */}
       <Text style={styles.sectionTitle}>👥 Integrantes do Grupo</Text>
       {GROUP_MEMBERS.map((member, index) => (
         <View key={index} style={styles.memberCard}>
@@ -88,7 +85,6 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingBottom: 40,
   },
-  // Header card
   headerCard: {
     backgroundColor: COLORS.surface,
     borderRadius: 20,
@@ -135,7 +131,6 @@ const styles = StyleSheet.create({
     color: COLORS.primary,
     fontWeight: '700',
   },
-  // Tecnologias
   techSection: {
     marginBottom: 24,
   },
@@ -159,7 +154,6 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '700',
   },
-  // Seção títulos
   sectionTitle: {
     color: COLORS.primary,
     fontSize: 15,
@@ -167,7 +161,6 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
     marginBottom: 12,
   },
-  // Cards de membros
   memberCard: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -210,7 +203,6 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '600',
   },
-  // Footer
   footer: {
     alignItems: 'center',
     marginTop: 24,

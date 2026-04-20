@@ -1,7 +1,3 @@
-/**
- * Formata um valor numérico para moeda brasileira (BRL)
- * Ex: 109.95 → "R$ 109,95"
- */
 export const formatPrice = (price) => {
   if (price === null || price === undefined) return 'R$ 0,00';
   return new Intl.NumberFormat('pt-BR', {
@@ -10,9 +6,6 @@ export const formatPrice = (price) => {
   }).format(price);
 };
 
-/**
- * Traduz o nome da categoria para português
- */
 export const translateCategory = (category) => {
   const translations = {
     "electronics": "Eletrônicos",
@@ -23,9 +16,6 @@ export const translateCategory = (category) => {
   return translations[category] || category;
 };
 
-/**
- * Lista de categorias disponíveis
- */
 export const CATEGORIES = [
   { id: "electronics", label: "Eletrônicos" },
   { id: "jewelery", label: "Joias" },

@@ -69,7 +69,6 @@ export default function ProductDetailScreen({ route, navigation }) {
       contentContainerStyle={styles.content}
       showsVerticalScrollIndicator={false}
     >
-      {/* Imagem do produto */}
       <View style={styles.imageContainer}>
         <Image
           source={{ uri: product.image }}
@@ -78,23 +77,19 @@ export default function ProductDetailScreen({ route, navigation }) {
         />
       </View>
 
-      {/* Badge de categoria */}
       <View style={styles.categoryBadge}>
         <Text style={styles.categoryText}>
           {translateCategory(product.category)}
         </Text>
       </View>
 
-      {/* Nome */}
       <Text style={styles.productName}>{product.title}</Text>
 
-      {/* Preço */}
       <View style={styles.priceContainer}>
         <Text style={styles.priceLabel}>Preço</Text>
         <Text style={styles.price}>{formatPrice(product.price)}</Text>
       </View>
 
-      {/* Avaliação */}
       {product.rating && (
         <View style={styles.ratingContainer}>
           <Text style={styles.ratingStars}>
@@ -107,14 +102,11 @@ export default function ProductDetailScreen({ route, navigation }) {
         </View>
       )}
 
-      {/* Divider */}
       <View style={styles.divider} />
 
-      {/* Descrição */}
       <Text style={styles.descriptionTitle}>Descrição</Text>
       <Text style={styles.description}>{product.description}</Text>
 
-      {/* Botão voltar */}
       <TouchableOpacity
         style={styles.backButton}
         onPress={() => navigation.goBack()}
@@ -169,7 +161,7 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     fontSize: 14,
   },
-  // Imagem
+
   imageContainer: {
     backgroundColor: COLORS.surface,
     borderRadius: 20,
@@ -184,7 +176,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 240,
   },
-  // Categoria
+
   categoryBadge: {
     alignSelf: 'flex-start',
     backgroundColor: COLORS.primaryGlow,
@@ -203,7 +195,7 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
     textTransform: 'uppercase',
   },
-  // Nome
+
   productName: {
     color: COLORS.text,
     fontSize: 20,
@@ -211,7 +203,7 @@ const styles = StyleSheet.create({
     lineHeight: 28,
     marginBottom: 16,
   },
-  // Preço
+
   priceContainer: {
     backgroundColor: COLORS.surface,
     borderRadius: 14,
@@ -237,7 +229,7 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 0 },
     textShadowRadius: 8,
   },
-  // Avaliação
+
   ratingContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -258,13 +250,13 @@ const styles = StyleSheet.create({
     color: COLORS.textSecondary,
     fontSize: 13,
   },
-  // Divider
+
   divider: {
     height: 1,
     backgroundColor: COLORS.primaryBorder,
     marginVertical: 20,
   },
-  // Descrição
+
   descriptionTitle: {
     color: COLORS.primary,
     fontSize: 13,
@@ -279,7 +271,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     marginBottom: 32,
   },
-  // Botão voltar
+
   backButton: {
     borderWidth: 1.5,
     borderColor: COLORS.primaryBorder,
