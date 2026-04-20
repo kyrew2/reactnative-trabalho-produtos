@@ -8,7 +8,7 @@ Aplicativo mobile desenvolvido em **React Native com Expo** para a disciplina de
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
+   git clone https://github.com/kyrew2/reactnative-trabalho-produtos.git
    ```
 2. **Instale as dependências:**
    ```bash
