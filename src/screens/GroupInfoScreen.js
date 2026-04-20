@@ -7,26 +7,14 @@ import {
 } from 'react-native';
 import { COLORS, SHADOWS } from '../theme/colors';
 
-// ============================================================
-// ⚠️  ATENÇÃO: Substitua os dados abaixo pelos dados reais
-//     dos integrantes do seu grupo antes de entregar!
-// ============================================================
 const GROUP_MEMBERS = [
   {
-    name: 'Nome Completo do Integrante 1',
-    ra: 'RA: 00000001',
+    name: 'Pedro Henrique Piccoli Franceschi',
+    ra: 'RA: 1137855',
   },
   {
-    name: 'Nome Completo do Integrante 2',
-    ra: 'RA: 00000002',
-  },
-  {
-    name: 'Nome Completo do Integrante 3',
-    ra: 'RA: 00000003',
-  },
-  {
-    name: 'Nome Completo do Integrante 4',
-    ra: 'RA: 00000004',
+    name: 'Guilherme Matte Embarach',
+    ra: 'RA: 1137953',
   },
 ];
 
